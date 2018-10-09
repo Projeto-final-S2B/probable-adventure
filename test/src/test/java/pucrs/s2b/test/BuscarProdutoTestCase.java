@@ -12,10 +12,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import tasks.BuscarProdutoTasks;
 
-public class AppTest
+
+public class BuscarProdutoTestCase
 {
 	private WebDriver driver;
+	public BuscarProdutoTasks buscar;  
 
 	@BeforeClass
 	public static void setupClass() {
@@ -26,7 +29,9 @@ public class AppTest
 	@Before
 	public void setupTest() {
 		driver = new ChromeDriver();
+		this.buscar = new BuscarProdutoTasks(driver);
 	}
+	
 	@Test
     public void  giveSiteGamesTorrentsWhenPlaceholderappearThenTestLanguage()
     {
@@ -40,8 +45,9 @@ public class AppTest
 		String actual = outElement.getAttribute("placeholder");
 		String expected = "Buscar Jogo Torrent";
 		
-		assertNotEquals(expected, actual);
+		assertEquals(expected, actual);
 		driver.close();	
+		
     }
 	/*@Test
     public void  giveSiteGamesTorrentsWhenThen()
