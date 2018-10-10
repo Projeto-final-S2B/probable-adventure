@@ -1,9 +1,9 @@
 package pucrs.s2b.test;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,15 +26,47 @@ public class BuscarProdutoTestCase
 	}
 	
 	@Test
-    public void  main()
+    public void testeBuscarBatman()
     {
 		this.buscar.digitarValor("Batman");
-		this.buscar.apertarButton();
+		this.buscar.apertarButtonBusca();
+    }
+	
+	@Test
+    public void testeBuscarHeavy()
+    {
+		this.buscar.digitarValor("Heavy");
+		this.buscar.apertarButtonBusca();
+    }
+	
+	@Test
+    public void testeBuscarWar()
+    {
+		this.buscar.digitarValor("War");
+		this.buscar.apertarButtonBusca();
+    }
+	
+	@Test
+    public void testeBuscarPs3()
+    {
+		this.buscar.apertarButtonPs3();
+		this.buscar.apertarGenero();
+		this.buscar.apertarGeneroAventura();
+    }
+	
+	@Test
+    public void testeBuscarXbox360()
+    {
+		this.buscar.apertarButtonXbox360();
+		this.buscar.apertarGenero();
+		this.buscar.apertarGeneroAventura();
     }
 	
 	@After
 	public void tearDown() {
-		//driver.close();		
+		driver.close();		
 	}
+	
+	
 	
 }

@@ -18,4 +18,21 @@ public class BuscaProdutoAppObject {
 	public WebElement getBuscarButton() {
 		return driver.findElement(By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/center/form/div/button"));
 	}
+	
+	public WebElement getBuscarPs3() {
+		return driver.findElement(By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/ul/li[5]"));
+	}
+	
+	public WebElement getBuscarXbox360() {
+		return driver.findElement(By.xpath("//*[@id=\"bs-example-navbar-collapse-1\"]/ul/li[3]"));
+	}
+	
+	public WebElement getBuscarGenero() {
+		return driver.findElement(By.xpath("//*[@id=\"myTabContent\"]/div[2]/div/div[1]/div[1]"));
+	}
+	
+	public WebElement getBuscarAventuras() {
+		return driver.findElement(By.xpath("//*[@id=\"myTabContent\"]/div[2]/div/div[1]/div[1]/select/option[3]"));
+	}
+	
 }
