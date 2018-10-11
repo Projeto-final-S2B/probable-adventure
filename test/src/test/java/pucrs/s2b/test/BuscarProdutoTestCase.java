@@ -25,7 +25,7 @@ public class BuscarProdutoTestCase
     	driver.get("https://www.gamestorrents.tv");	
 	}
 	
-	@Test
+	/*@Test
     public void testeBuscarBatman()
     {
 		this.buscar.digitarValor("Batman");
@@ -62,9 +62,22 @@ public class BuscarProdutoTestCase
 		this.buscar.apertarGeneroAventura();
     }
 	
+	@Test
+    public void testeTabelaJogo()
+    {
+		this.buscar.apertarTabelaJogo();
+    }*/
+	
+	@Test
+    public void testeLingua()
+    {
+		this.buscar.apertarLingua();
+		this.buscar.apertarPortugues();
+    }
+	
 	@After
 	public void tearDown() {
-		driver.close();		
+		//driver.close();		
 	}
 	
 	

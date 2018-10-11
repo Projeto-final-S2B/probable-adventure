@@ -35,4 +35,15 @@ public class BuscaProdutoAppObject {
 		return driver.findElement(By.xpath("//*[@id=\"myTabContent\"]/div[2]/div/div[1]/div[1]/select/option[3]"));
 	}
 	
+	public WebElement getBuscarTabelaJogo() {
+		return driver.findElement(By.xpath("//*[@id=\"home\"]/div[1]"));
+	}
+	
+	public WebElement getBuscarLingua() {
+		return driver.findElement(By.className("goog-te-gadget-simple"));
+	}
+	
+	public WebElement getBuscarPortugues() {
+		return driver.findElement(By.xpath("//*[@id=\":1.menuBody\"]/table/tbody/tr/td[15]/a[3]"));
+	}
 }
