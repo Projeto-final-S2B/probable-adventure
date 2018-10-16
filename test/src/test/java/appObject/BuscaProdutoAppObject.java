@@ -39,11 +39,12 @@ public class BuscaProdutoAppObject {
 		return driver.findElement(By.xpath("//*[@id=\"home\"]/div[1]"));
 	}
 	
-	public WebElement getBuscarLingua() {
-		return driver.findElement(By.className("goog-te-gadget-simple"));
+	public String getBuscarBatman() {
+		WebElement OutElement = driver.findElement(By.xpath("//*[@id=\"header\"]/div[3]/div[3]/div/table/tbody/tr[1]/td[1]"));
+		return OutElement.getText();
 	}
-	
-	public WebElement getBuscarPortugues() {
-		return driver.findElement(By.xpath("//*[@id=\":1.menuBody\"]/table/tbody/tr/td[15]/a[3]"));
+	public String getBuscarHeavy() {
+		WebElement OutElement = driver.findElement(By.xpath("//*[@id=\"header\"]/div[3]/div[3]/div/table/tbody/tr[1]/td[1]"));
+		return OutElement.getText();
 	}
 }

@@ -1,12 +1,12 @@
 package pucrs.s2b.test;
 
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import VerificationPoint.VerificaProdutoVerificationPoint;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import tasks.BuscarProdutoTasks;
 
@@ -15,7 +15,7 @@ public class BuscarProdutoTestCase
 {
 	private WebDriver driver;
 	public BuscarProdutoTasks buscar; 
-	
+	public VerificaProdutoVerificationPoint V;
 	
 	@Before
 	public void setupTest() {
@@ -23,13 +23,15 @@ public class BuscarProdutoTestCase
 		driver = new ChromeDriver();
 		this.buscar = new BuscarProdutoTasks(driver);
     	driver.get("https://www.gamestorrents.tv");	
+    	V = new VerificaProdutoVerificationPoint(driver);
 	}
 	
-	/*@Test
+	@Test
     public void testeBuscarBatman()
     {
 		this.buscar.digitarValor("Batman");
 		this.buscar.apertarButtonBusca();
+		this.V.checarBuscaBatman();
     }
 	
 	@Test
@@ -37,9 +39,10 @@ public class BuscarProdutoTestCase
     {
 		this.buscar.digitarValor("Heavy");
 		this.buscar.apertarButtonBusca();
+		this.V.checarBuscaHeavy();
     }
 	
-	@Test
+	/*@Test
     public void testeBuscarWar()
     {
 		this.buscar.digitarValor("War");
@@ -68,12 +71,6 @@ public class BuscarProdutoTestCase
 		this.buscar.apertarTabelaJogo();
     }*/
 	
-	@Test
-    public void testeLingua()
-    {
-		this.buscar.apertarLingua();
-		this.buscar.apertarPortugues();
-    }
 	
 	@After
 	public void tearDown() {

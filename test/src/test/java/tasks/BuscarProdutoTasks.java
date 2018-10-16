@@ -1,6 +1,5 @@
 package tasks;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import appObject.BuscaProdutoAppObject;
@@ -42,14 +41,4 @@ public class BuscarProdutoTasks {
 	public void apertarTabelaJogo() {
 		this.busca.getBuscarTabelaJogo().click();
 	}
-	
-	public void apertarLingua() {
-		this.busca.getBuscarLingua().click();
-	}
-	
-	public void apertarPortugues() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		//this.busca.getBuscarPortugues().click();
-		js.executeScript("javascript:void(0)", driver);
-	}//https://www.guru99.com/execute-javascript-selenium-webdriver.html
 }
