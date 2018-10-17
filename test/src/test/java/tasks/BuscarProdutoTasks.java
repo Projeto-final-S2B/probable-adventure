@@ -26,6 +26,10 @@ public class BuscarProdutoTasks {
 		this.busca.getBuscarPs3().click();
 	}
 	
+	public void apertarButtonJogo() {
+		this.busca.getBuscarJogo().click();
+	}
+	
 	public void apertarButtonXbox360() {
 		this.busca.getBuscarXbox360().click();
 	}

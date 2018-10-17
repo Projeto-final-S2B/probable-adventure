@@ -35,6 +35,10 @@ public class BuscaProdutoAppObject {
 		return driver.findElement(By.xpath("//*[@id=\"myTabContent\"]/div[2]/div/div[1]/div[1]/select/option[3]"));
 	}
 	
+	public WebElement getBuscarJogo() {
+		return driver.findElement(By.xpath("//*[@id=\"home\"]/div[1]/div/div/h6/a"));
+	}
+	
 	public WebElement getBuscarTabelaJogo() {
 		return driver.findElement(By.xpath("//*[@id=\"home\"]/div[1]"));
 	}
@@ -43,8 +47,24 @@ public class BuscaProdutoAppObject {
 		WebElement OutElement = driver.findElement(By.xpath("//*[@id=\"header\"]/div[3]/div[3]/div/table/tbody/tr[1]/td[1]"));
 		return OutElement.getText();
 	}
-	public String getBuscarHeavy() {
+	
+	public String getBuscarResidentEvil() {
 		WebElement OutElement = driver.findElement(By.xpath("//*[@id=\"header\"]/div[3]/div[3]/div/table/tbody/tr[1]/td[1]"));
+		return OutElement.getText();
+	}
+	
+	public String getBuscarWar() {
+		WebElement OutElement = driver.findElement(By.xpath("//*[@id=\"header\"]/div[3]/div[3]/div/table/tbody/tr[1]/td[1]"));
+		return OutElement.getText();
+	}
+	
+	public String getBuscarGeneroTabela() {
+		WebElement OutElement = driver.findElement(By.xpath("//*[@id=\"header\"]/div[3]/div[2]/div[1]/div[2]/div[1]/ul/li[4]"));
+		return OutElement.getText();
+	}
+	
+	public String getBuscarNombre() {
+		WebElement OutElement = driver.findElement(By.xpath("//*[@id=\"header\"]/div[3]/div[2]/div[1]/div[2]/div[1]/ul/li[1]"));
 		return OutElement.getText();
 	}
 }

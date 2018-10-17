@@ -35,18 +35,19 @@ public class BuscarProdutoTestCase
     }
 	
 	@Test
-    public void testeBuscarHeavy()
+    public void testeBuscarResidentEvil()
     {
-		this.buscar.digitarValor("Heavy");
+		this.buscar.digitarValor("Resident Evil");
 		this.buscar.apertarButtonBusca();
-		this.V.checarBuscaHeavy();
+		this.V.checarBuscaResidentEvil();
     }
 	
-	/*@Test
+	@Test
     public void testeBuscarWar()
     {
 		this.buscar.digitarValor("War");
 		this.buscar.apertarButtonBusca();
+		this.V.checarBuscaWar();
     }
 	
 	@Test
@@ -55,6 +56,8 @@ public class BuscarProdutoTestCase
 		this.buscar.apertarButtonPs3();
 		this.buscar.apertarGenero();
 		this.buscar.apertarGeneroAventura();
+		this.buscar.apertarButtonJogo();
+		this.V.checarBuscaPS3();
     }
 	
 	@Test
@@ -63,18 +66,21 @@ public class BuscarProdutoTestCase
 		this.buscar.apertarButtonXbox360();
 		this.buscar.apertarGenero();
 		this.buscar.apertarGeneroAventura();
+		this.buscar.apertarButtonJogo();
+		this.V.checarBuscaXBOX360();
     }
 	
 	@Test
     public void testeTabelaJogo()
     {
 		this.buscar.apertarTabelaJogo();
-    }*/
+		this.V.checarBuscaNombre();
+    }
 	
 	
 	@After
 	public void tearDown() {
-		//driver.close();		
+		driver.close();		
 	}
 	
 	
